@@ -13,12 +13,8 @@ html body {
     overflow: hidden;
     text-align: center;
     font-size: 16px;
+    cursor: -webkit-grab;
 }
-
-
-/* 
-test */
-
 
 
 /*---------------------------------------------------------*/
@@ -52,62 +48,19 @@ test */
 /*---------------------------------------------------------*/
 
 
-.nav-on {
-    background: tomato;
-    color: royalblue;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1001;
-    padding: 10px;
-}
-.nav-off {
-    position: fixed;
-    color: royalblue;
-    background-color: rgba(0, 0, 0, 0.6);
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    display: none;
-}
 .nav-container {
     background-color: tomato;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     min-width: 200px;
-    z-index: 1002;
-    display: none;
-}
-nav.nav-container a {
-    color: #fff;
+    z-index: 10;
     display: block;
+}
+ .nav-item {
+    color: #fff;
     padding: 5px 10px;
 }
-#toggle {
-    display: none;
-}
-#toggle:checked ~ nav.nav-container {
-    visibility: hidden;
-}
-#toggle:checked ~ .nav-off {
-    visibility: visible;
-}
-@media screen and (min-width: 640px){
-    .nav-on, .nav-off {
-       visibility: visible;
-    }
-    .nav-container {
-       display: block;
-       position: static;
-    }
-    .nav-container a {
-      display: inline-block;
-    }
-}
-
 
 /*/////////// BACKGROUND OVERLAY///////////*/
 
