@@ -7,7 +7,7 @@
     box-sizing: border-box
 }
 html body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
     max-width: 100%;
     max-height: 100vh;
     overflow: hidden;
@@ -50,16 +50,26 @@ html body {
 
 .nav-container {
     background-color: tomato;
+    margin: 20px;
+    width: 90%;
+    align-items: center;
     position: absolute;
-    right: 0;
     top: 0;
-    min-width: 200px;
     z-index: 10;
-    display: block;
+    opacity: 0.6;
 }
- .nav-item {
+.nav-list {
+    padding: 1px;
+    display: inline-flex;
+    list-style-type: none;
+ }
+
+ .nav-link {
     color: #fff;
     padding: 5px 10px;
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
 }
 
 /*/////////// BACKGROUND OVERLAY///////////*/
@@ -89,15 +99,19 @@ main.bg-overlay {
 
 .boxes {
     background: yellow;
-    height: 60%;
+    height: 75%;
     width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
     flex-direction: column;
-    overflow: hidden;
+    overflow: scroll;
 }
+::-webkit-scrollbar { 
+     display: none;
+}
+
 .box {    
     width: auto;
     height: 100%;
@@ -114,6 +128,9 @@ main.bg-overlay {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.box2, .box4 {
+    flex-direction: row-reverse;
+}
 .innerbox {
     border-style: solid;
     height: 100%;
@@ -128,6 +145,7 @@ main.bg-overlay {
     color: #fff;
     width: 40%;
 }
+/*/////////// box per section ///////////*/
 
 
 /*---------------------------------------------------------*/
@@ -135,15 +153,18 @@ main.bg-overlay {
 /*---------------------------------------------------------*/
 
 
-/*/////////// global stuff///////////*/
+/*/////////// global stuff ///////////*/
 h3 {
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-bottom: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 15px;
 }
 p {
+    font-size: 17px;
     display: block;
     padding-bottom: 16px;
+    margin: 16px;
 }
 .btn {
     background: red;
@@ -151,4 +172,10 @@ p {
     font-size: 18px;
     padding: 10px 25px;
     text-decoration: none;
+}
+.img-cv {
+    max-width: auto;
+    max-height: 100%;
+    background-position: center;
+    transform: scale(0.8);
 }
