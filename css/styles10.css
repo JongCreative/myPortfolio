@@ -14,8 +14,8 @@ html body {
     text-align: center;
     font-size: 16px;
     cursor: -webkit-grab;
-}
 
+}
 
 /*---------------------------------------------------------*/
 /* BACKGROUND. */
@@ -26,7 +26,6 @@ html body {
     height: 100vh;
     display: flex;
     align-items: center;
-    color: aqua;
 }
 .fullscreen-wrap {
     position: absolute;
@@ -50,12 +49,12 @@ html body {
 
 .nav-container {
     background-color: tomato;
-    margin: 20px;
+    margin: 5%;
     width: 90%;
     align-items: center;
     position: absolute;
     top: 0;
-    z-index: 10;
+    z-index: 90;
     opacity: 0.6;
 }
 .nav-list {
@@ -66,7 +65,8 @@ html body {
 
  .nav-link {
     color: #fff;
-    padding: 5px 10px;
+    font-weight: 900;
+    padding: 5px 5px;
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
@@ -106,7 +106,8 @@ main.bg-overlay {
     transform: translate(-50%, -50%);
     position: absolute;
     flex-direction: column;
-    overflow: scroll;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar { 
      display: none;
@@ -122,7 +123,7 @@ main.bg-overlay {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: center;
+    justify-content: center;
     position: relative;
     top: 50%;
     left: 50%;
@@ -135,6 +136,13 @@ main.bg-overlay {
     border-style: solid;
     height: 100%;
     margin: 5px;
+    align-self: center;
+    max-width: auto;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .innerbox-left {
     background: rgb(54, 54, 17);
@@ -146,7 +154,10 @@ main.bg-overlay {
     width: 40%;
 }
 /*/////////// box per section ///////////*/
-
+.box4-b {
+    align-content: center;
+    overflow: hidden;
+}
 
 /*---------------------------------------------------------*/
 /* FOOTER. */
@@ -160,11 +171,13 @@ h3 {
     font-size: 40px;
     margin: 15px;
 }
+
 p {
     font-size: 17px;
     display: block;
     padding-bottom: 16px;
     margin: 16px;
+    padding-top: 50px;
 }
 .btn {
     background: red;
@@ -176,6 +189,6 @@ p {
 .img-cv {
     max-width: auto;
     max-height: 100%;
-    background-position: center;
-    transform: scale(0.8);
+    background-color: black;
+
 }
